@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1D1E"
+    tools:context=".Profile">
+
+    <ImageView
+        android:id="@+id/backbtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/card_back_btn"
+        android:foregroundGravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_icon" />
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="Profile"
+        android:textColor="#949596"
+        android:textSize="27dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/backbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toEndOf="@+id/backbtn"
+        app:layout_constraintTop_toTopOf="@+id/backbtn"
+        app:layout_constraintVertical_bias="0.55" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/profile"
+            android:layout_gravity="center"
+            app:tint="@color/white" />
+
+
+        <TextView
+            android:id="@+id/name_prof"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Tish"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:textColor="#ED9455" />
+
+        <TextView
+            android:id="@+id/un_prof"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="tish123"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:textColor="#949596" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Upload your own recipe to share with others"
+            android:textSize="18dp"
+            android:textColor="#ffffff" />
+
+
+
+        <EditText
+            android:id="@+id/img"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:backgroundTint="#949596"
+            android:layout_marginTop="20dp"
+            android:textSize="17dp"
+            android:hint="link of the image"
+            android:textColorHint="#949596"
+            android:textColor="#949596"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:backgroundTint="#949596"
+            android:layout_marginTop="20dp"
+            android:textSize="17dp"
+            android:hint="Title of recipe"
+            android:textColor="#949596"
+            android:textColorHint="#949596" />
+
+        <EditText
+            android:id="@+id/des"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:backgroundTint="#949596"
+            android:layout_marginTop="20dp"
+            android:textSize="17dp"
+            android:hint="Step should follow"
+            android:textColor="#949596"
+            android:textColorHint="#949596" />
+
+        <EditText
+            android:id="@+id/ing"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:backgroundTint="#949596"
+            android:layout_marginTop="20dp"
+            android:textSize="17dp"
+            android:hint="Ingredients needed"
+            android:textColorHint="#949596"
+            android:textColor="#949596"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:backgroundTint="#949596"
+            android:layout_marginTop="20dp"
+            android:textSize="17dp"
+            android:hint="Select the relavent category"
+            android:textColorHint="@color/white"
+            android:inputType="text" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/salad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:buttonTint="#949596"
+                android:textColor="#949596"
+                android:text="Salad"/>
+
+            <RadioButton
+                android:id="@+id/mainDish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:buttonTint="#949596"
+                android:textColor="#949596"
+                android:text="Main"/>
+
+            <RadioButton
+                android:id="@+id/bev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:buttonTint="#949596"
+                android:textColor="#949596"
+                android:text="Beverages"/>
+
+            <RadioButton
+                android:id="@+id/Desserts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:buttonTint="#949596"
+                android:textColor="#949596"
+                android:text="Dessert"/>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@drawable/roundbtn"
+            android:text="Upload Recipe" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

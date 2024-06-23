@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecipeActivity">
+
+    <ImageView
+        android:id="@+id/itemimg"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:background="#F6F6F6"
+        android:hapticFeedbackEnabled="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/main_dish" />
+
+    <ImageView
+        android:id="@+id/shade"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="@id/itemimg"
+        app:layout_constraintBottom_toBottomOf="@id/itemimg"
+        app:layout_constraintEnd_toEndOf="@+id/itemimg"
+        app:srcCompat="@drawable/img_overlay" />
+
+    <ImageView
+        android:id="@+id/backbtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemimg"
+        app:srcCompat="@drawable/back_icon"
+        android:hapticFeedbackEnabled="true"
+        android:clickable="true"
+        android:foregroundGravity="center"
+        android:background="@drawable/card_back_btn" />
+
+    <ImageView
+        android:id="@+id/fullscreen"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:foregroundGravity="center"
+        android:hapticFeedbackEnabled="true"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemimg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemimg"
+        app:layout_constraintVertical_bias="0.078"
+        app:srcCompat="@drawable/full_size_ic"
+        app:tint="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="409dp"
+        android:layout_height="600dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/card_recipe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemimg">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="45dp"
+            android:text="Sample Title"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/ing"
+            android:layout_width="150dp"
+            android:layout_height="42dp"
+            android:layout_below="@+id/title"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/roundbtn"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Ingredients"
+            tools:ignore="NotSibling" />
+
+        <ScrollView
+            android:id="@+id/scrolling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ing"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentStart="true"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/ingData"
+                android:gravity="start"
+                android:lineSpacingExtra="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text=""
+                 />
+        </ScrollView>
+
+        <Button
+            android:id="@+id/steps"
+            android:layout_width="150dp"
+            android:layout_height="42dp"
+            android:layout_below="@+id/title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="34dp"
+            android:background="@drawable/roundbtn"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Steps"
+            tools:ignore="NotSibling" />
+        <ScrollView
+            android:id="@+id/scrollstep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/steps"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentStart="true"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/stepsData"
+                android:lineSpacingExtra="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:gravity="start"
+                android:text=""
+                />
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout"
+        app:srcCompat="@drawable/scroll_up" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

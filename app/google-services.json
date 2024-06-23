@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "28108506291",
+    "project_id": "dishdiscover-65b34",
+    "storage_bucket": "dishdiscover-65b34.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:28108506291:android:a6677264195d16e803dcc6",
+        "android_client_info": {
+          "package_name": "com.example.dishdiscover"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9K66kVM2QdAfDJdp1kq2q_ioZsMoF5I4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
